@@ -1,6 +1,6 @@
-from transformers import BeitFeatureExtractor, BeitForImageClassification
-from PIL import Image
 import requests
+from PIL import Image
+from transformers import BeitFeatureExtractor, BeitForImageClassification
 
 url = 'https://media.istockphoto.com/id/155276879/photo/modern-passanger-airplane-flying-above-clouds.jpg?s=612x612&w=0&k=20&c=tjIs1P72CZyPvms_Li9b9pCFp_YCHRF3-8eeKVhJ_NE='
 image = Image.open(requests.get(url, stream=True).raw)
